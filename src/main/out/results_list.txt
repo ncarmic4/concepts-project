@@ -1,0 +1,50 @@
+IDENTIFIERS:
+0 - IDENTIFIER      exampleInt                                           identifier
+1 - IDENTIFIER      exampleString                                        identifier
+2 - IDENTIFIER      string                                               identifier
+3 - IDENTIFIER      exampleDouble                                        identifier
+4 - IDENTIFIER      exampleFunc                                          identifier
+5 - IDENTIFIER      myInt                                                identifier
+
+
+SYMBOLS:
+0 - KEYWORD         import                                                   import
+1 - LITERAL         "scl.h"                                          literal_string
+2 - KEYWORD         implementations                                 implementations
+3 - KEYWORD         function                                               function
+4 - KEYWORD         main                                                       main
+5 - KEYWORD         return                                                   return
+6 - KEYWORD         type                                                       type
+7 - KEYWORD         integer                                                 integer
+8 - KEYWORD         is                                                           is
+9 - KEYWORD         variables                                             variables
+10 - KEYWORD         define                                                   define
+11 - KEYWORD         of                                                           of
+12 - KEYWORD         double                                                   double
+13 - KEYWORD         begin                                                     begin
+14 - KEYWORD         set                                                         set
+15 - OPERATOR        =                                                    assignment
+16 - LITERAL         0                                                   literal_int
+17 - LITERAL         "This is an example string"                      literal_string
+18 - LITERAL         4.5                                              literal_double
+19 - KEYWORD         while                                                     while
+20 - OPERATOR        <                                                          less
+21 - LITERAL         10                                                  literal_int
+22 - KEYWORD         do                                                           do
+23 - OPERATOR        +                                                           add
+24 - LITERAL         1                                                   literal_int
+25 - KEYWORD         endwhile                                               endwhile
+26 - KEYWORD         if                                                           if
+27 - OPERATOR        ==                                                        equal
+28 - KEYWORD         then                                                       then
+29 - KEYWORD         else                                                       else
+30 - OPERATOR        -                                                      subtract
+31 - KEYWORD         endif                                                     endif
+32 - PUNCTUATION     (                                                      open_par
+33 - PUNCTUATION     )                                                     close_par
+34 - KEYWORD         display                                                 display
+35 - KEYWORD         exit                                                       exit
+36 - KEYWORD         endfun                                                   endfun
+37 - KEYWORD         parameters                                           parameters
+38 - LITERAL         "myInt: "                                        literal_string
+39 - PUNCTUATION     ,                                                         comma

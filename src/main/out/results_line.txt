@@ -1,0 +1,182 @@
+--------------------------------------------------------------------------------------
+5 * import "scl.h"
+--------------------------------------------------------------------------------------
+     * KEYWORD         import                                                   import
+     * LITERAL         "scl.h"                                          literal_string
+--------------------------------------------------------------------------------------
+7 * implementations
+--------------------------------------------------------------------------------------
+     * KEYWORD         implementations                                 implementations
+--------------------------------------------------------------------------------------
+8 * function main return type integer is
+--------------------------------------------------------------------------------------
+     * KEYWORD         function                                               function
+     * KEYWORD         main                                                       main
+     * KEYWORD         return                                                   return
+     * KEYWORD         type                                                       type
+     * KEYWORD         integer                                                 integer
+     * KEYWORD         is                                                           is
+--------------------------------------------------------------------------------------
+9 * variables
+--------------------------------------------------------------------------------------
+     * KEYWORD         variables                                             variables
+--------------------------------------------------------------------------------------
+10 * define exampleInt of type integer
+--------------------------------------------------------------------------------------
+     * KEYWORD         define                                                   define
+     * IDENTIFIER      exampleInt                                           identifier
+     * KEYWORD         of                                                           of
+     * KEYWORD         type                                                       type
+     * KEYWORD         integer                                                 integer
+--------------------------------------------------------------------------------------
+11 * define exampleString of type string
+--------------------------------------------------------------------------------------
+     * KEYWORD         define                                                   define
+     * IDENTIFIER      exampleString                                        identifier
+     * KEYWORD         of                                                           of
+     * KEYWORD         type                                                       type
+     * IDENTIFIER      string                                               identifier
+--------------------------------------------------------------------------------------
+12 * define exampleDouble of type double
+--------------------------------------------------------------------------------------
+     * KEYWORD         define                                                   define
+     * IDENTIFIER      exampleDouble                                        identifier
+     * KEYWORD         of                                                           of
+     * KEYWORD         type                                                       type
+     * KEYWORD         double                                                   double
+--------------------------------------------------------------------------------------
+13 * begin
+--------------------------------------------------------------------------------------
+     * KEYWORD         begin                                                     begin
+--------------------------------------------------------------------------------------
+14 * set exampleInt = 0
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        =                                                    assignment
+     * LITERAL         0                                                   literal_int
+--------------------------------------------------------------------------------------
+15 * set exampleString = "This is an example string"
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleString                                        identifier
+     * OPERATOR        =                                                    assignment
+     * LITERAL         "This is an example string"                      literal_string
+--------------------------------------------------------------------------------------
+16 * set exampleDouble = 4.5
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleDouble                                        identifier
+     * OPERATOR        =                                                    assignment
+     * LITERAL         4.5                                              literal_double
+--------------------------------------------------------------------------------------
+19 * while exampleInt < 10 do
+--------------------------------------------------------------------------------------
+     * KEYWORD         while                                                     while
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        <                                                          less
+     * LITERAL         10                                                  literal_int
+     * KEYWORD         do                                                           do
+--------------------------------------------------------------------------------------
+20 * set exampleInt = exampleInt + 1
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        =                                                    assignment
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        +                                                           add
+     * LITERAL         1                                                   literal_int
+--------------------------------------------------------------------------------------
+21 * endwhile
+--------------------------------------------------------------------------------------
+     * KEYWORD         endwhile                                               endwhile
+--------------------------------------------------------------------------------------
+23 * set exampleInt = 0
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        =                                                    assignment
+     * LITERAL         0                                                   literal_int
+--------------------------------------------------------------------------------------
+26 * if exampleInt == 0 then
+--------------------------------------------------------------------------------------
+     * KEYWORD         if                                                           if
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        ==                                                        equal
+     * LITERAL         0                                                   literal_int
+     * KEYWORD         then                                                       then
+--------------------------------------------------------------------------------------
+27 * set exampleInt = 1
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        =                                                    assignment
+     * LITERAL         1                                                   literal_int
+--------------------------------------------------------------------------------------
+28 * else
+--------------------------------------------------------------------------------------
+     * KEYWORD         else                                                       else
+--------------------------------------------------------------------------------------
+29 * exampleInt = -1
+--------------------------------------------------------------------------------------
+     * IDENTIFIER      exampleInt                                           identifier
+     * OPERATOR        =                                                    assignment
+     * OPERATOR        -                                                      subtract
+--------------------------------------------------------------------------------------
+30 * endif
+--------------------------------------------------------------------------------------
+     * KEYWORD         endif                                                     endif
+--------------------------------------------------------------------------------------
+32 * set exampleString = exampleFunc(exampleInt)
+--------------------------------------------------------------------------------------
+     * KEYWORD         set                                                         set
+     * IDENTIFIER      exampleString                                        identifier
+     * OPERATOR        =                                                    assignment
+     * IDENTIFIER      exampleFunc                                          identifier
+     * PUNCTUATION     (                                                      open_par
+     * IDENTIFIER      exampleInt                                           identifier
+     * PUNCTUATION     )                                                     close_par
+--------------------------------------------------------------------------------------
+34 * display exampleString
+--------------------------------------------------------------------------------------
+     * KEYWORD         display                                                 display
+     * IDENTIFIER      exampleString                                        identifier
+--------------------------------------------------------------------------------------
+35 * exit
+--------------------------------------------------------------------------------------
+     * KEYWORD         exit                                                       exit
+--------------------------------------------------------------------------------------
+36 * endfun main
+--------------------------------------------------------------------------------------
+     * KEYWORD         endfun                                                   endfun
+     * KEYWORD         main                                                       main
+--------------------------------------------------------------------------------------
+38 * function exampleFunc return type string parameters myInt of type integer is
+--------------------------------------------------------------------------------------
+     * KEYWORD         function                                               function
+     * IDENTIFIER      exampleFunc                                          identifier
+     * KEYWORD         return                                                   return
+     * KEYWORD         type                                                       type
+     * IDENTIFIER      string                                               identifier
+     * KEYWORD         parameters                                           parameters
+     * IDENTIFIER      myInt                                                identifier
+     * KEYWORD         of                                                           of
+     * KEYWORD         type                                                       type
+     * KEYWORD         integer                                                 integer
+     * KEYWORD         is                                                           is
+--------------------------------------------------------------------------------------
+39 * begin
+--------------------------------------------------------------------------------------
+     * KEYWORD         begin                                                     begin
+--------------------------------------------------------------------------------------
+40 * return "myInt: ", myInt
+--------------------------------------------------------------------------------------
+     * KEYWORD         return                                                   return
+     * LITERAL         "myInt: "                                        literal_string
+     * PUNCTUATION     ,                                                         comma
+     * IDENTIFIER      myInt                                                identifier
+--------------------------------------------------------------------------------------
+41 * endfun exampleFunc
+--------------------------------------------------------------------------------------
+     * KEYWORD         endfun                                                   endfun
+     * IDENTIFIER      exampleFunc                                          identifier

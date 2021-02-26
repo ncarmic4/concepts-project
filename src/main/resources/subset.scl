@@ -1,0 +1,42 @@
+/*
+ description
+ Program     : subset.scl
+ Author      : Nicholas Carmichael, Feb. 20, 2021.
+*/
+import "scl.h"
+
+implementations
+function main return type integer is
+variables
+    define exampleInt of type integer
+    define exampleString of type string
+    define exampleDouble of type double
+begin
+    set exampleInt = 0
+    set exampleString = "This is an example string"
+    set exampleDouble = 4.5
+
+    // execute a while loop
+    while exampleInt < 10 do
+        set exampleInt = exampleInt + 1
+    endwhile
+
+    set exampleInt = 0
+
+    // example conditional
+    if exampleInt == 0 then
+        set exampleInt = 1
+    else
+        exampleInt = -1
+    endif
+
+    set exampleString = exampleFunc(exampleInt)
+
+    display exampleString
+    exit
+endfun main
+
+function exampleFunc return type string parameters myInt of type integer is
+begin
+    return "myInt: ", myInt
+endfun exampleFunc
