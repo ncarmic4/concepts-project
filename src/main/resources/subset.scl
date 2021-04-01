@@ -6,6 +6,12 @@
 import "scl.h"
 
 implementations
+function exampleFunc return type string parameters myInt of type integer is
+begin
+    return "myInt: " + myInt
+exit
+endfun exampleFunc
+
 function main return type integer is
 variables
     define exampleInt of type integer
@@ -27,16 +33,11 @@ begin
     if exampleInt == 0 then
         set exampleInt = 1
     else
-        exampleInt = -1
+        set exampleInt = -1
     endif
 
     set exampleString = exampleFunc(exampleInt)
 
     display exampleString
-    exit
+exit
 endfun main
-
-function exampleFunc return type string parameters myInt of type integer is
-begin
-    return "myInt: ", myInt
-endfun exampleFunc

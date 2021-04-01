@@ -1,9 +1,3 @@
-/*
- * File:    Line.java
- * Author:  Nicholas Carmichael
- * School:  Kennesaw State University, CCSE
- * Course:  CS4308 - 01 - Prof. J M Garrido
- */
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -57,6 +51,14 @@ public class Line {
     public ArrayList<Token> sortList() {
         Collections.sort(lexemes);
         return lexemes;
+    }
+
+    public ArrayList<Token> getLexemes() {
+        return lexemes;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     @Override

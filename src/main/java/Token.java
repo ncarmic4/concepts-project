@@ -12,6 +12,7 @@ public class Token implements Comparable<Token> {
 
     private int start;
     private int end;
+    private int line;
 
     private int referenceIndex;
 
@@ -35,14 +36,16 @@ public class Token implements Comparable<Token> {
      * @param subType Name of the token.
      * @param start Column start value.
      * @param end Column end value.
+     * @param line Line number.
      */
-    public Token(Type type, String value, String subType, int start, int end) {
+    public Token(Type type, String value, String subType, int start, int end, int line) {
         this.type = type;
         this.value = value;
         this.regex = value;
         this.subType = subType;
         this.start = start;
         this.end = end;
+        this.line = line;
     }
 
     public int getStart() {
@@ -51,6 +54,10 @@ public class Token implements Comparable<Token> {
 
     public int getEnd() {
         return end;
+    }
+
+    public int getLine() {
+        return line;
     }
 
     public String getValue() {
@@ -63,6 +70,10 @@ public class Token implements Comparable<Token> {
 
     public Type getType() {
         return type;
+    }
+
+    public String getSubType() {
+        return subType;
     }
 
     public int getReferenceIndex() {

@@ -4,6 +4,7 @@
  * School:  Kennesaw State University, CCSE
  * Course:  CS4308 - 01 - Prof. J M Garrido
  */
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -17,6 +18,7 @@ public class Scanner {
 
     private final ArrayList<Token> identifiers = new ArrayList<>(); // all identifiers present
     private final ArrayList<Token> symbols = new ArrayList<>();    // every token except for identifiers
+    private final ArrayList<Token> tokens = new ArrayList<>();
 
     private final ArrayList<Line> lines = new ArrayList<>();
     private boolean comment = false;
@@ -59,7 +61,7 @@ public class Scanner {
 
             while (matcher.find()) {
                 Token lexeme = new Token(token.getType(), str.substring(matcher.start(), matcher.end()),
-                        token.getValue(), matcher.start(), matcher.end());
+                        token.getValue(), matcher.start(), matcher.end(), lineNumber);
                 line.tokenize(lexeme);
             }
         }
@@ -68,6 +70,7 @@ public class Scanner {
         // add token to corresponding list
         for (Token token : line.sortList()) {
             token((token.getType() == Token.Type.IDENTIFIER ? identifiers : symbols), token);
+            token(tokens, token);
         }
     }
 
@@ -118,7 +121,7 @@ public class Scanner {
      */
     public void printList() throws IOException {
         // Print per line
-        PrintWriter printWriterLine = new PrintWriter("src/main/out/results_line.txt");
+        PrintWriter printWriterLine = new PrintWriter("src/main/out/scanner_results_line.txt");
         for (Line line : lines) {
             printWriterLine.write(line.toString());
             System.out.println(line);
@@ -126,7 +129,7 @@ public class Scanner {
         printWriterLine.close();
 
         // Print lists
-        PrintWriter printWriterList = new PrintWriter("src/main/out/results_list.txt");
+        PrintWriter printWriterList = new PrintWriter("src/main/out/scanner_results_list.txt");
         printWriterList.write("IDENTIFIERS:\n");
         for (Token token : identifiers) {
             printWriterList.write(token.getReferenceIndex() + " - " + token + "\n");
@@ -137,5 +140,9 @@ public class Scanner {
             printWriterList.write(token.getReferenceIndex() + " - " + token + "\n");
         }
         printWriterList.close();
+    }
+
+    public ArrayList<Line> getLines() {
+        return lines;
     }
 }

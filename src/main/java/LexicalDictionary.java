@@ -4,6 +4,7 @@
  * School:  Kennesaw State University, CCSE
  * Course:  CS4308 - 01 - Prof. J M Garrido
  */
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -24,8 +25,9 @@ public class LexicalDictionary {
     public static void init() {
         /* -------------------------------- LITERALS --------------------------------- */
         add(Token.Type.LITERAL, "literal_string", "\".+?\"");
+        add(Token.Type.LITERAL, "literal_bool", "(true|false)");
         add(Token.Type.LITERAL, "literal_double", "(?<!\\S)[1-9]+[.]\\d+(?!\\S+)");
-        add(Token.Type.LITERAL, "literal_int",    "(?<!\\S)\\d+(?!\\S+)");
+        add(Token.Type.LITERAL, "literal_integer",    "(?<!\\S)-?\\d+(?!\\S+)");
         add(Token.Type.LITERAL, "literal_import", "<.*>");
         add(Token.Type.LITERAL, "literal_param", "(?<=[(\\[<])\\d+(?=[)\\]>])");
 
@@ -69,17 +71,14 @@ public class LexicalDictionary {
         add(Token.Type.KEYWORD, "void");
         add(Token.Type.KEYWORD, "integer");
         add(Token.Type.KEYWORD, "double");
-        add(Token.Type.KEYWORD, "TBool");
-        add(Token.Type.KEYWORD, "TString");
-        add(Token.Type.KEYWORD, "array");
-        add(Token.Type.KEYWORD, "constant");
+        add(Token.Type.KEYWORD, "bool");
+        add(Token.Type.KEYWORD, "string");
 
         add(Token.Type.KEYWORD, "import");
         add(Token.Type.KEYWORD, "define");
         add(Token.Type.KEYWORD, "is");
         add(Token.Type.KEYWORD, "of");
         add(Token.Type.KEYWORD, "type");
-        add(Token.Type.KEYWORD, "main");
         add(Token.Type.KEYWORD, "exit");
         add(Token.Type.KEYWORD, "set");
         add(Token.Type.KEYWORD, "display");

@@ -1,9 +1,3 @@
-/*
- * File:    Main.java
- * Author:  Nicholas Carmichael
- * School:  Kennesaw State University, CCSE
- * Course:  CS4308 - 01 - Prof. J M Garrido
- */
 import java.io.File;
 import java.io.IOException;
 
@@ -12,7 +6,7 @@ public class Main {
 
         // uncomment the following line for testing purposes
         // (for instance, running from IDE rather than manual compilation)
-        // args = new String[] { "src/main/resources/subset.scl" };
+        args = new String[] { "src/main/resources/subset.scl" };
 
         // check args
         if (args.length == 0) {
@@ -22,6 +16,7 @@ public class Main {
 
         // init components
         LexicalDictionary.init();
+        LexicalRules.init();
         Scanner scanner = new Scanner();
 
         // process each file
@@ -29,5 +24,7 @@ public class Main {
             File file = new File(s);
             scanner.processFile(file.getAbsolutePath());
         }
+
+        Parser parser = new Parser(scanner.getLines());
     }
 }
